@@ -1,0 +1,266 @@
+<html><head>
+		<title>GLORE</title>
+		<link href="./css/styles.css" rel="stylesheet" type="text/css">
+		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="./js/utility_createTask.js" language="JavaScript" type="text/javascript"></script>
+	</head>
+
+	<body onload="javascript:getEmailList(); return false;">
+
+		<div id="main_container">
+
+			<div id="left_container">
+
+				<!-- Logo Start -->
+				<div id="title">
+
+					<div id="logo">
+						<h1>GLORE</h1>
+					</div>
+
+					<div id="name">
+						<h3>Grid Binary Logistic Regression</h3>
+					</div>
+
+				</div>
+				<!-- Logo End -->
+
+				<!-- Navigation Start-->
+				<div id="navigation" class="border rounded-upper">
+
+					<div id="nav_header" class="bottom-border">
+						<h3>Navigation</h3></div>
+
+					<a id="nav_login" class="nav bottom-border" href="./login.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Login</h2>
+							<p>Login GLORE system</p>
+						</div>
+					</a>
+					
+					<a id="nav_home" class="nav bottom-border" href="./home.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Home</h2>
+							<p>View your GLORE profile page</p>
+						</div>
+					</a>
+
+					<a id="nav_instructions" class="nav bottom-border" href="./instructions.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Instructions</h2>
+							<p>Learn the fundamentals of using GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_registration" class="nav bottom-border" href="./registration.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Registration</h2>
+							<p>Register an account with GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_createTask" class="nav bottom-border" onclick="javascript:getEmailList(); return false;" href="./createTask.html" >
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="hightlighted">Create Task</h2>
+							<p>Create a new GLORE task</p>
+						</div>
+					</a>
+
+					<a id="nav_wait" class="nav bottom-border" href="./WaitForParticipants.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>WaitForParticipants</h2>
+							<p>Wait for participants</p>
+						</div>
+					</a>
+					
+					<a id="nav_compute" class="nav bottom-border" href="./computation.jsp">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Computation</h2>
+							<p>Computation process</p>
+						</div>
+					</a>
+				</div>
+				</div>
+				<!-- Navigation End-->
+
+			<div id="right_container" class="border rounded-upper">
+
+				<div id="header" class="bottom-border">
+					<h2>Create Task</h2>
+				</div>
+
+				<div id="error_display">
+
+				</div>
+
+				<div id="content">
+
+					<form id = 'createTask'>
+							<div class='top'>
+								<h3>Task Information:</h3>
+							</div>
+							<div class = 'container alignleft'> 
+								<div class = 'alignleft'><span>Title</span></div>
+								<div class = 'alignleft'><input type='text' id='taskName' name='taskName'></div>
+								<div id = 'createTask_title' class = 'formComfirmationImg wrong alignleft' ></div>
+								<div class='clear'></div>
+							</div>
+							<div class ='container alignright'> 
+								<div class = 'alignleft'><span>Expires in</span></div>
+								<div class = 'alignleft'><input type='text' id='expiration' name='expDays'></div>
+								<div class = 'alignleft'><span>days</span></div>
+								<div id = 'createTask_expiration' class = 'formComfirmationImg wrong alignleft' ></div>
+								<div class='clear'></div>
+							</div>
+							<div class = 'clear'></div>
+							<div class = 'container alignleft'> 
+								<div class = 'alignleft'><span>Description</span></div>
+								<div class = 'alignleft'><textarea id='description' name='description'></textarea></div>
+								<!--  <div id = 'createTask_description' class = 'formComfirmationImg wrong alignleft' ></div> -->
+								<div class = 'clear'></div>
+							</div>
+
+							<div class = 'clear'></div>
+
+		                    <div class="top">
+								<h3>Initiator Email:</h3>
+							</div>
+							<div>
+							 <div class="container alignleft"> 
+								<div class='alignleft'><input id='ownerEmail' name='ownerEmail'></div>
+								<div id="createTask_ownerEmail" class="formComfirmationImg wrong alignleft"></div>
+								<div class="clear"></div>				
+				           	</div>
+				           	<div class="clear"></div>	
+				           	</div>
+							           
+							<div class='top'>
+								<h3>Participant Information:</h3>
+							</div>
+
+							<div class="body">
+								
+									
+										<div>
+											<textarea id="participants" name="emails" style="width:190px"></textarea>
+										</div>
+									
+										
+										<div>
+											<select id="emailSelect" multiple="true" style="width:190px">
+												<option>---Email---</option>
+							           			<option value="0">1@sjtu.edu.cn </option>
+									           	<option value="1">2@sjtu.edu.cn </option>
+											</select>
+										</div>
+									
+									
+										<div>
+											<button type="button" class="alignleft" id="addParticipant">Add</button> 
+										</div>
+										<div>
+											<button type="button" class="alignleft" id="resetParticipants">Reset</button> 
+										</div>
+										<div class="clear"></div>
+									
+								
+							</div>
+							<!--  
+							<div class = 'body'>
+								<tr>
+									<td>
+										<div>
+											<textarea id="participants"name="emails"></textarea>
+										</div>
+									</td>
+									<td>	
+										<div>
+											<select id="emailSelect" multiple="true">
+												<option>---Email---</option>
+									           
+									           	<option value="0">1@sjtu.edu.cn </option>
+									           
+									           	<option value="1">2@sjtu.edu.cn </option>
+									           
+									           	<option value="2">a@a.com </option>
+									           
+									           	<option value="3">jialan.que@gmail.com </option>
+									           
+									           	<option value="4">jiq4@pitt.edu </option>
+									           
+									           	<option value="5">jque@ucsd.edu </option>
+							           
+											</select>
+										</div>
+									</td>
+									<td>
+										<div>
+											<button type='button' class='alignleft' id='addParticipant'>Add</button> 
+										</div>
+										<div>
+											<button type='button' class='alignleft' id='resetParticipants' >Reset</button> 
+										</div>
+										<div class='clear'></div>
+									</td>
+								</tr>
+							</div>
+-->
+							<div class='top'>
+								<h3>Task Parameters:</h3>
+							</div>
+
+							<div class = 'body'>
+								<div> 
+									<div  class='alignleft'><span>Maximum iterations</span></div>
+									<div id = 'createTask_iterationMax' class = 'formComfirmationImg check alignright' ></div>
+									<div class='alignright'><input type='text' id='iterationMax' name='iterationMax' value ='20'></div>
+								</div>
+								<div class='clear'></div>
+								<div> 
+									<div  class='alignleft'><span>Epsilon</span></div>
+									<div id = 'createTask_epsilon' class = 'formComfirmationImg check alignright' ></div>
+									<div class='alignright'><input type='text' id='epsilon' name='epsilon' value='0.000001'></div>
+								</div>
+								<div class='clear'></div>
+							</div>
+							<div class="body">
+								<div>
+									<applet code="glore.ChooseFileApplet.class" archive="ChooseFileApplet.jar, Jama-1.0.2.jar" width="390" height="62&quot;" mayscript="">
+										<!-- The parameter of applet is added by jwc -->
+										<param name="showFilePath" value="showFilePath">
+									</applet>
+									<div id="choosefile" class="formComfirmationImg wrong alignright"></div>
+								</div>
+								<div>
+									<div class="alignright"><input type="hidden" name="showFilePath" id="showFilePath" size="50"></div>
+									<div class="alignright"><input type="hidden" name="showProperty" id="showProperty" value="showProperty" size="50"></div>
+								</div>
+							</div>
+							
+							<button type='button' id='createTask_Submit' >Create</button>
+
+						</form>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	
+
+</body></html>
