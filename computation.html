@@ -1,0 +1,160 @@
+<html><head>
+		<title>GLORE</title>
+		<link href="./css/styles.css" rel="stylesheet" type="text/css">
+		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="./js/utility.js" language="JavaScript" type="text/javascript"></script>
+
+		<script src="./js/utility_computation.js" language="JavaScript" type="text/javascript"></script>
+	</head>
+
+	<body>
+
+		<div id="main_container">
+
+			<div id="left_container">
+
+				<!-- Logo Start -->
+				<div id="title">
+
+					<div id="logo">
+						<h1>GLORE</h1>
+					</div>
+
+					<div id="name">
+						<h3>Grid Binary Logistic Regression</h3>
+					</div>
+
+				</div>
+				<!-- Logo End -->
+
+				<!-- Navigation Start-->
+				<div id="navigation" class="border rounded-upper">
+
+					<div id="nav_header" class="bottom-border">
+						<h3>Navigation</h3></div>
+
+					<a id="nav_login" class="nav bottom-border" href="./login.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 >Login</h2>
+							<p>Login GLORE system</p>
+						</div>
+					</a>
+					
+					<a id="nav_home" class="nav bottom-border" href="./home.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Home</h2>
+							<p>View your GLORE profile page</p>
+						</div>
+					</a>
+
+					<a id="nav_instructions" class="nav bottom-border" href="./instructions.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Instructions</h2>
+							<p>Learn the fundamentals of using GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_registration" class="nav bottom-border" href="./registration.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Registration</h2>
+							<p>Register an account with GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html" onClick="getEmailList();">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Create Task</h2>
+							<p>Create a new GLORE task</p>
+						</div>
+					</a>
+					
+					<a id="nav_wait" class="nav bottom-border" href="./WaitForParticipants.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>WaitForParticipants</h2>
+							<p>Wait for participants</p>
+						</div>
+					</a>
+					
+					<a id="nav_compute" class="nav " href="./computation.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="hightlighted">Computation</h2>
+							<p>Computation process</p>
+						</div>
+					</a>
+				</div>
+				<!-- Navigation End-->
+
+			</div>
+
+			<div id="right_container" class="border rounded-upper">
+
+				<div id="header" class="bottom-border">
+					<h2>Computation</h2>
+				</div>
+
+				<div id="error_display">
+
+				</div>
+
+				<div id="content">
+					<table>
+					<tr>
+					<td>
+					<td bgcolor="#FFFFFF"> </td>
+
+					<applet code="glore.Procedure2Applet2.class" archive="Procedure2Applet2.jar, Jama-1.0.2.jar" width=500 height=500>
+					<!-- The parameter of applet is added by jwc -->
+					<param id="dataPath_a1" name="dataPath" value="0">
+					<param name="taskName" value="1">
+					<param name="root_property" value="2">
+					<param name="maxIteration" value="3">
+					<param name="epsilon" value="4">
+					<param name="taskStatus" value="&{jsVar};">
+					</applet>
+					</td>
+					</tr>
+					</table>
+					
+					<td class="content" align="center">
+					<input type="button" value="GetGlobalReport!" disabled=true id="globalButton"  onClick="getReport('<%=taskName %>')">
+					</td>
+					<div id="reportURL"></div>
+					<td>
+					<applet code="glore.GetLocalReportApplet.class" archive="GetLocalReportApplet.jar, Jama-1.0.2.jar" width=120 height=30>
+					<param name="email" value="6">
+					<param name="dataPath" value="7">
+					<param name="taskName" value="8">
+					<param name="root_property" value="9">
+					<param name="maxIteration" value="10">
+					<param name="epsilon" value="11">
+					<param name="taskStatus" value="12">
+					<param name="property" value="13">
+					<param name="createReportAddress" value="14">
+					</applet>
+					</td>
+					<div id="LocalreportURL"></div>
+					<td height="50" align="center"><input type="button" disabled=true id="TestButton" value="Test" class="content" onClick="window.location='Test.jsp'">
+					</td>
+				</div>
+
+			</div>
+
+		</div>
+
+	
+
+</body></html>

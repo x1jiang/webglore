@@ -1,0 +1,179 @@
+<html><head>
+		<title>GLORE</title>
+		<link href="./css/styles.css" rel="stylesheet" type="text/css">
+		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="./js/utility_wait.js" language="JavaScript" type="text/javascript"></script>
+	</head>
+
+	<body>
+
+		<div id="main_container">
+
+			<div id="left_container">
+
+				<!-- Logo Start -->
+				<div id="title">
+
+					<div id="logo">
+						<h1>GLORE</h1>
+					</div>
+
+					<div id="name">
+						<h3>Grid Binary Logistic Regression</h3>
+					</div>
+
+				</div>
+				<!-- Logo End -->
+
+				<!-- Navigation Start-->
+				<div id="navigation" class="border rounded-upper">
+
+					<div id="nav_header" class="bottom-border">
+						<h3>Navigation</h3></div>
+
+					<a id="nav_login" class="nav bottom-border" href="./login.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Login</h2>
+							<p>Login GLORE system</p>
+						</div>
+					</a>
+					
+					<a id="nav_home" class="nav bottom-border" href="./home.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Home</h2>
+							<p>View your GLORE profile page</p>
+						</div>
+					</a>
+
+					<a id="nav_instructions" class="nav bottom-border" href="./instructions.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Instructions</h2>
+							<p>Learn the fundamentals of using GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_registration" class="nav bottom-border" href="./registration.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="">Registration</h2>
+							<p>Register an account with GLORE</p>
+						</div>
+					</a>
+
+					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html" onClick="getEmailList();">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Create Task</h2>
+							<p>Create a new GLORE task</p>
+						</div>
+					</a>
+
+					<a id="nav_wait" class="nav bottom-border" href="./WaitForParticipants.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2 class="hightlighted">WaitForParticipants</h2>
+							<p>Wait for participants</p>
+						</div>
+					</a>
+
+					<a id="nav_compute" class="nav bottom-border" href="./computation.jsp">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Computation</h2>
+							<p>Computation process</p>
+						</div>
+					</a>
+				</div>
+				</div>
+				<!-- Navigation End-->
+
+			<div id="right_container" class="border rounded-upper">
+
+				<div id="header" class="bottom-border">
+					<h2>Wait for Participants</h2>
+				</div>
+
+				<div id="error_display">
+
+				</div>
+
+				<div id="content">
+				
+				<div id = 'frontPage_information' class ='container'>	
+				<div class='top'>
+					<h3>Task Parameters:</h3>
+				</div>
+				
+				<div class = 'body'>
+							<div>Task Name: </div>
+							<div id='taskName'></div>
+							<div>Initiator Email: </div>
+							<div id='initiatorEmail'></div>
+					<div class = 'clear'></div>
+				</div>
+				
+				<div class='top'>
+					<h3>Participant Status :</h3>
+				</div>
+				
+				<div class = 'body'>
+					<div id="readyStatus">show the status of participants here </div>
+					<div class = 'clear'></div>
+				</div>	
+				
+				<div class='top'>
+					<h3>Task data properties :</h3>
+				</div>
+				
+				<div class = 'body'>
+					<div id="taskdata_property">show task data property </div>
+					<div class = 'clear'></div>
+				</div>	
+				<div>
+				<div class='alignright'><input type="hidden" name="taskProperty" id='taskProperty'  value='taskProperty' size="50"/></div>
+				</div>			
+				<div class=' submitData hide'>
+				<div class='top'>
+					<h3>User data properties :</h3>
+				</div>
+				
+				<div class = 'body'>
+					<div id='properties'>show your data property</div>
+					<div class = 'clear'></div>
+				</div>	
+				
+				<div class='body '>
+					<div>
+						<applet code="glore.ChooseFileApplet.class" archive="ChooseFileApplet.jar, Jama-1.0.2.jar" width=400 height=55" MAYSCRIPT>
+							<!-- The parameter of applet is added by jwc -->
+							<param name="showFilePath" value="showFilePath">
+						</applet>
+						<div id = 'choosefile' class = 'formComfirmationImg wrong alignright' ></div>
+					</div>
+					<div>
+						<input type="hidden" name="userFilePath" id='userFilePath'  value='userFilePath' size="50"/>
+						<input type="hidden" name="userProperty" id='userProperty'  value='userProperty' size="50"/>
+					</div>
+					<button type='button' id='submit' >Submit</button>
+					<div class = 'clear'></div>
+				</div>		
+				</div>
+					<button type = 'button' id='show_submit'>Submit Data</button>
+					<button type = 'button' id='begin_computation'>Begin Computation</button>
+
+				</div>
+				<div class = 'clear'></div>
+			</div>		
+				</div>
+		</div>
+</body></html>

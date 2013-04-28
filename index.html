@@ -1,0 +1,426 @@
+<html><head>
+		<title>GLORE</title>
+		<meta name="description" content="Grid Binary Logistic Regression">
+		<meta name="keywords" content="GLORE, glore, grid, binary, logistic, regression, sharing, shared, data, model, privacy">
+		<meta name="author" content="Asher McCall Garland">
+		<meta charset="UTF-8">
+		<link href="./css/styles.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" async="" src="http://www4.clustrmaps.com/counter/map.js"></script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
+		<script src="./js/utility.js" language="JavaScript" type="text/javascript"></script>
+
+	</head>
+
+	<body>
+
+		<div id="mainContainer">
+
+			<div id="frontPage_header" class="container">
+
+				<div class="top">
+					<div class="alignleft">
+						<h1><a href="index.html">GLORE</a></h1>
+					</div>
+					<div class="alignleft">
+						<h2>Grid Binary Logistic Regression</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+					<p>Building shared models without sharing data. Allowing users to share results (i.e. globally trained logistic regression models) in a privacy-preserving manner.</p>
+
+			</div>
+			
+			<!-- added by lph 12/17 -->
+            <div id="choosePage_step0" class="container" >
+				
+				<div class="top">
+					<div class="alignleft">
+						<h2>---Register</h2>						
+					</div>
+					<div class="alignleft">
+						<h2>---Or Read instruction---</h2>						
+					</div>
+					<div class="alignleft">
+						<h2>Or Create task---</h2>						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<br><br>
+				<div class="body">
+				<form id="choose">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <button class="aligncenter" type="button" id="chooseregister">Register</button>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <button class="aligncenter" type="button" id="chooseinstruction">Instruction</button>
+				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				 <button class="aligncenter" type="button" id="choosecreate">Createtask</button>
+				 </form>
+				</div>
+				<table width="600" cellspacing="0" cellpadding="2">
+					<tbody><tr bgcolor="#FFFFFF">
+					<td width="200" align="center"><a href="http://dbmi.ucsd.edu/confluence/display/DBMI/About+Us">About us</a></td>
+					<td width="200" align="center"><a href="http://dbmi.ucsd.edu">Visit DBMI@UCSD</a></td>
+					<td width="200" align="center"><a href="mailto:x1jiang@ucsd.edu">Email the webmaster</a></td>
+					<td align="right">
+					<div class="alignright" id="clustrmaps-widget" style="width: 160px; height: 106px; position: relative;"><a href="http://www4.clustrmaps.com/counter/maps.php?url=http://dbmi-engine.ucsd.edu" style="border: none;"><img style="background-image: url(http://www4.clustrmaps.com/images/nasa_classic.jpg); border: none; position: absolute; left: 0px; top: 0px; padding: 0px; background-position: initial initial; background-repeat: initial initial;" src="http://www4.clustrmaps.com/stats/maps-layer/1069000/1069283/dbmi-engine.ucsd.edu-thumb-text.png"><img src="http://www4.clustrmaps.com/stats/maps-layer/1069000/1069283/dbmi-engine.ucsd.edu-thumb-dots.png" style="position: absolute; border: none; z-index: 1; left: 0px; top: 0px; padding: 0px;"><script src="http://www4.clustrmaps.com/stats/maps-dynamic/1069000/1069283/dynamic.js"></script><img style="left: 122px; top: 59px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 109px; top: 45px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 136px; top: 43px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 132px; top: 42px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 23px; top: 44px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 23px; top: 44px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 73px; top: 35px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 107px; top: 46px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 106px; top: 47px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 110px; top: 51px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 129px; top: 45px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 129px; top: 45px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"><img style="left: 122px; top: 59px; position: absolute; width: 9px; height: 9px; border: none; display: inline; z-index: 1; padding: 0px;" src="http://www4.clustrmaps.com/images/smallyellow.png"></a></div><script type="text/javascript">var _clustrmaps = {'url' : 'http://dbmi-engine.ucsd.edu', 'user' : 1069283, 'server' : '4', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2012-12-27', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www4.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript>&lt;a href="http://www4.clustrmaps.com/user/15d1050e3"&gt;&lt;img src="http://www4.clustrmaps.com/stats/maps-no_clusters/dbmi-engine.ucsd.edu-thumb.jpg" alt="Locations of visitors to this page" /&gt;&lt;/a&gt;</noscript>				
+					</td>
+					</tr>
+				</tbody></table>
+				<div class="clear"></div>
+			</div>
+			
+			<div id="frontPage_step1" class="container" style="display: block;">
+				
+				<div class="top">
+					<div class="alignleft">
+						<h1>Step 1:</h1>
+					</div>
+					
+					<div class="alignleft">
+						<h2>Provide Your Information</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div style="display:inline;text-align:center" class="body">
+<span id='dupemail_warn' style="line-height: 5;color:red;margin-left: 30px;font-size: 15px;">User already exists</span>
+<form id="register">
+							<div> 
+								<div class="alignleft"><span>First name</span></div>
+								<div id="register_firstName" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="text" name="firstName" id="firstName"></div>
+							</div>
+							<div class="clear"></div>
+							<div> 
+								<div class="alignleft"><span>Last name</span></div>
+								<div id="register_lastName" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="text" name="lastName" id="lastName"></div>
+							</div>
+							<div class="clear"></div>
+							<div> 
+								<div class="alignleft"><span>Email</span></div>
+								<div id="register_email" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="text" name="email" id="email"></div>
+							</div>
+
+							<div class="clear"></div>
+							<div> 
+								<div class="alignleft"><span>Comfirm Email</span></div>
+								<div id="register_comfirmEmail" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="text" name="confirmEmail" id="comfirmEmail"></div>
+							</div>
+							<div class="clear"></div>
+							<div> 
+								<div class="alignleft"><span>Password</span></div>
+								<div id="register_password" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="password" name="password" id="password"></div>
+							</div>
+							<div class="clear"></div>
+							<div> 
+								<div class="alignleft"><span>Comfirm Password</span></div>
+								<div id="register_comfirmPassword" class="formComfirmationImg wrong alignright"></div>
+								<div class="alignright"><input type="password" name="confirmPassword" id="comfirmPassword"></div>
+							</div>
+							<div class="clear"></div>
+							<button type="button" id="register_submit">Register</button>
+						</form>
+					
+					
+
+
+					
+
+					<div class="clear"></div>
+
+				</div>
+
+				<div class="clear"></div>
+			
+			</div>
+
+			<div id="frontPage_step2" class="container" style="display: none;">
+
+				<div class="top">
+					<div class="alignleft">
+						<h1>Step 2:</h1>
+					</div>
+					<div class="alignleft">
+						<h2>Instruction</h2>
+					</div>
+					<div id="instruction" class="formInstructionImg first alignleft"></div>
+					<div class="clear"></div>
+				</div>
+
+				<hr>
+				<div class="body">
+					<div id="step2_testdata" class="alignleft">
+					<h3> Test data </h3>
+					<table>
+						<tbody><tr><td><a href="data/IPDLR_1.txt">IPDLR_1,</a></td> <td><a href="data/IPDLR_2.txt">IPDLR_2</a></td></tr>
+						<tr><td><a href="data/IPDLR_3.txt">IPDLR_3,</a></td> <td><a href="data/IPDLR_4.txt">IPDLR_4</a></td></tr>
+					</tbody></table>
+				</div>
+				
+
+					<div id="step2_instructions" class="container alignright">
+						<button type="button" id="instructions_display">Create Task</button>
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+
+			</div>
+
+
+			<div id="frontPage_step3" class="container" style="display: none;">
+
+				<div class="top">
+					<div class="alignleft">
+						<h1>Step 3:</h1>
+					</div>
+					<div class="alignleft">
+						<h2>Create New GLORE Task</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div style="display:inline;" class="body">
+
+				<span id="dupTitle_warn" style="line-height: 9;color:red;margin-left: 15px;font-size: 15px;">Task name already exists</span>
+					<div id="step3_createTask" class="container alignright">
+
+						<form id="createTask">
+							<div class="top">
+								<h3>Task Information:</h3>
+							</div>
+							<div class="container alignleft"> 
+								<div class="alignleft"><span>Title</span></div>
+								<div class="alignleft"><input type="text" id="taskName" name="taskName" style="width:90"></div>
+								<div id="createTask_title" class="formComfirmationImg wrong alignleft"></div>
+								<div class="clear"></div>
+							</div>
+							<div class="container alignright"> 
+								<div class="alignleft"><span>Expires in</span></div>
+								<div class="alignleft"><input type="text" id="expiration" name="expDays" ></div>
+								<div class="alignleft"><span>days</span></div>
+								<div id="createTask_expiration" class="formComfirmationImg wrong alignleft"></div>
+								<div class="clear"></div>
+							</div>
+							<div class="clear"></div>
+							<div class="container alignleft"> 
+								<div class="alignleft"><span>Description</span></div>
+								<div class="alignleft"><textarea id="description"></textarea></div>
+								<div id="createTask_description"></div>
+								<div class="clear"></div>
+							</div>
+
+							<div class="clear"></div>
+							
+		                    <div class="top">
+								<h3>Initiator Email:</h3>
+							</div>
+										<div>
+										    <div class="container alignleft"> 
+											<div class="alignleft"><input id="ownerEmail" name="ownerEmail"></div>
+											<div id="createTask_ownerEmail" class="formComfirmationImg wrong alignleft"></div>
+											<div class="clear"></div>
+										     </div>
+										<div class="clear"></div>						
+							           </div>
+							
+
+							<div class="top">
+								<h3>Participant Information:</h3>
+							</div>
+
+							<div class="body">
+								
+									
+										<div>
+											<textarea id="participants" name="emails" style="width:390px"></textarea>
+										</div>
+									
+										
+										<div>
+											<select id="emailSelect" multiple="true" style="width:390px">
+												<option>---Email---</option>
+							           
+											</select>
+										</div>
+									
+									
+										<div>
+											<button type="button" class="alignleft" id="addParticipant">Add</button> 
+										</div>
+										<div>
+											<button type="button" class="alignleft" id="resetParticipants">Reset</button> 
+										</div>
+										<div class="clear"></div>
+									
+								
+							</div>
+
+							<div class="top">
+								<h3>Task Parameters:</h3>
+							</div>
+
+							<div class="top">
+								<h3>Task Parameters:</h3>
+							</div>
+
+							<div class="body">
+								<div> 
+								    <div class="container alignleft"> </div>
+									<div class="alignleft"><span>Maximum iterations</span></div>
+									<div id="createTask_iterationMax" class="formComfirmationImg check alignright"></div>
+									<div class="alignright"><input type="text" id="iterationMax" name="iterationMax" value="20"></div>
+								</div>
+								<div class="clear"></div>
+								<div> 
+								    <div class="container alignleft"> </div>
+									<div class="alignleft"><span>Epsilon</span></div>
+									<div id="createTask_epsilon" class="formComfirmationImg check alignright"></div>
+									<div class="alignright"><input type="text" id="epsilon" name="epsilon" value="0.000001"></div>
+								</div>
+								<div class="clear"></div>
+							</div>
+							
+							<div class="body">
+								<div>
+									<applet code="glore.ChooseFileApplet.class" archive="ChooseFileApplet.jar, Jama-1.0.2.jar" width="390" height="62&quot;" mayscript="">
+										<!-- The parameter of applet is added by jwc -->
+										<param name="showFilePath" value="showFilePath">
+									</applet>
+									<div id="choosefile" class="formComfirmationImg wrong alignright"></div>
+								</div>
+								<div>
+									<div class="alignright"><input type="hidden" name="showFilePath" id="showFilePath" size="50"></div>
+									<div class="alignright"><input type="hidden" name="showProperty" id="showProperty" value="showProperty" size="50"></div>
+								</div>
+							</div>
+
+							<button type="button" id="createTask_Submit">Create</button>
+
+						</form>
+
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+		
+			</div>
+			
+			<div id="frontPage_step4" class="container" style="display: none;">
+
+				<div class="top">
+					<div class="alignleft">
+						<h1>Step 4:</h1>
+					</div>
+					<div class="alignleft">
+						<h2>Wait For Participants</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+			<div class="body">
+		    <div id="frontPage_step4ainformation" class="container alignright">	
+				
+				<div class="top">
+					<h3>Task Parameters:</h3>
+				</div>
+					
+				<div class="body">
+					<table>
+						<tbody><tr>
+							<td>Task Name: </td>
+							<td id="step4_taskName">xx</td>
+							<td>Initiator Email: </td>
+							<td id="step4_initiatorEmail">w6jiang@ucsd.edu</td>
+						</tr>
+					</tbody></table>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="top">
+					<h3>Participant Status :</h3>
+				</div>
+				
+				<div class="body">
+					<div id="readyStatus">show the status of participants here </div>
+					<div class="clear"></div>
+				</div>				
+				
+				<div class="top">
+					<h3>User data properties :</h3>
+				</div>
+				
+				<div class="body">
+					<div id="step4_properties">show properties</div>
+					<button type="button" id="step4_compute">Compute</button>
+					<div class="clear"></div>
+				</div>				
+		</div>
+		<div class="clear"></div>
+		</div>			
+				
+		</div>
+		
+		<div id="frontPage_step5" class="container" style="display: none;">
+
+				<div class="top">
+					<div class="alignleft">
+						<h1>Step 5:</h1>
+					</div>
+					<div class="alignleft">
+						<h2>Computation</h2>
+					</div>
+					<div class="clear"></div>
+				</div>
+				
+				<div class="body">
+					<applet code="glore.Procedure2Applet.class" id="step5_compute" archive="Procedure2Applet.jar, Jama-1.0.2.jar" width="500" height="450">
+					<!-- The parameter of applet is added by jwc -->
+					<param name="dataPath" id="step5_dataPath" value="">
+					<param name="taskName" id="step5_taskName" value="">
+					<param name="root_property" id="step5_root_property" value="">
+					<param name="maxIteration" id="step5_maxIteration" value="">
+					<param name="epsilon" id="step5_epsilon" value="">
+					<param name="taskStatus" id="step5_taskStatus" value="">
+					</applet>
+
+					<input type="button" value="GetGlobalReport!" disabled="true" id="globalButton" onclick="getReport('&lt;%=taskName %&gt;')">
+
+					<div id="reportURL"></div>
+					<!--  <td class="content" align="center"><input type="button" class="content" value="GetLocalReport"  onClick="window.location='./getlocalreportservlet'">-->
+					<!--  <td class="content" align="center">
+					<input type="button" value="GetLocalReport!" onClick="getLocalReport('<%=taskName %>')">
+					</td>-->
+					
+					
+					<applet code="glore.GetLocalReportApplet.class" archive="GetLocalReportApplet.jar, Jama-1.0.2.jar" width="120" height="30">
+					<param name="email" value="">
+					<param name="dataPath" value="">
+					<param name="taskName" value="">
+					<param name="root_property" value="">
+					<param name="maxIteration" value="">
+					<param name="epsilon" value="">
+					<param name="taskStatus" value="">
+					<param name="property" value="">
+					<param name="createReportAddress" value="&gt;">
+					</applet>
+					
+					
+					<div id="LocalreportURL"></div>
+					<!-- <td class="content" align="center"><input type="submit" value="Test" disabled=true/> </td> -->
+					 
+					<input type="button" disabled="true" id="TestButton" value="Test" class="content" onclick="window.location='Test.jsp'">
+					
+					<div class="clear"></div>
+				</div>				
+				
+				
+		</div>
+    </div>
+	
+</body></html>
