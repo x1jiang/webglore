@@ -61,7 +61,7 @@
 %>
 	
 <td>
-<applet code="glore.LocalTestApplet.class" archive="LocalTestApplet.jar, Jama-1.0.2.jar" width=500 height=55" MAYSCRIPT>
+<applet code="glore.LocalTestApplet.class" archive="WebGlore.jar" width=500 height=55" MAYSCRIPT>
 <!-- The parameter of applet is added by jwc -->
 <param name="showFilePath" value="<%=showFilePath %>">
 <param name="betaString" value="<%=betaString %>">

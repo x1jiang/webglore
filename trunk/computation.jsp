@@ -211,7 +211,7 @@
 				<tr>
 				<td>
 				<!-- The parameter of applet is added by jwc -->
-				<applet code="glore.Procedure2Applet.class" archive="Procedure2Applet.jar, Jama-1.0.2.jar" width=500 height=450>			
+				<applet code="glore.Procedure2Applet.class" archive="WebGlore.jar" width=500 height=450>			
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
 				<param name="root_property" value="<%=root %>">
@@ -236,7 +236,7 @@
 				</td>-->
 				
 				<td>
-				<applet code="glore.GetLocalReportApplet.class" archive="GetLocalReportApplet.jar, Jama-1.0.2.jar" width=120 height=30>
+				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
 				<param name="email" value="<%=email %>">
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
