@@ -42,11 +42,11 @@ $(document).ready(function(){
 		if($('.submitData').hasClass('hide')){
 			$('.submitData').slideDown('fast');
 			$('.submitData').removeClass('hide');
-			$('#show_submit').html('Hide submission');
+			$('#show_submit').html('Hide');
 		}else{
 			$('.submitData').addClass('hide');
 			$('.submitData').hide();
-			$('#show_submit').html('Submit Data');
+			$('#show_submit').html('Provide training data location');
 		}
 	});
 
@@ -130,11 +130,13 @@ function getTaskInfo(){
 		//to get initiator email
 //		$('#initiatorEmail')[0].innerHTML = initEmail;
 		$('#taskName')[0].innerHTML = taskName;
+		$('#begin_computation').hide();
 	}
 //	var Request = GetRequest();
 //	var task=Request['taskName'];
 //	var email = Request['email'];
 	else{
+		$('#show_submit').hide();
 		$.ajax({type:'POST', async:false, url: './getTaskInfo', 
 		success: function(data){
 			var statusInfo = eval("(" + data + ")");

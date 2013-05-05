@@ -12,8 +12,13 @@ $(document).ready(function(){
 	});
 	
 	$('button#createTask_Submit').click(function(event){
+//		var w2 = new WaitingTip({innerHTML:"<img src='images/waiting.gif' />wait several seconds..."});  
+//        var div1El = document.getElementById("createTask_Submit");  
+//        w2.show(div1El,"center"); 
 		if ( comfirmCreatetask())
 	{
+		$('#error_display').empty();
+		$('#error_display').append('<p>Please allow a few seconds for the system to create a task<br><br><br><br><br><br><br><br><br></p>');
 		//	alert(testflag);
 		$.ajax({type:'POST', async:false, url: './creategloretaskservlet', data:$('#createTask').serialize(),
 			success: function(data){
