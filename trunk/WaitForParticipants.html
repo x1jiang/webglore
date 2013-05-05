@@ -1,5 +1,5 @@
 <html><head>
-		<title>GLORE</title>
+		<title>WebGLORE</title>
 		<link href="./css/styles.css" rel="stylesheet" type="text/css">
 		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
 		<script src="./js/utility_wait.js" language="JavaScript" type="text/javascript"></script>
@@ -19,13 +19,13 @@
 					</div>
 
 					<div id="name">
-						<h3>Grid Binary Logistic Regression</h3>
+						<h3>Web-based Grid binary LOgistic REgression (WebGLORE)</h3>
 					</div>
 
 				</div>
 				<!-- Logo End -->
 
-				<!-- Navigation Start-->
+<!-- Navigation Start-->
 				<div id="navigation" class="border rounded-upper">
 
 					<div id="nav_header" class="bottom-border">
@@ -35,16 +35,16 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2>Login</h2>
-							<p>Login GLORE system</p>
+							<h2 class="">Login</h2>
+							<p>Log into the GLORE system</p>
 						</div>
 					</a>
 					
-					<a id="nav_home" class="nav bottom-border" href="./home.html">
+					<a id="nav_home" class="nav bottom-border" href="./index.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Home</h2>
+							<h2 class="hightlighted">Home</h2>
 							<p>View your GLORE profile page</p>
 						</div>
 					</a>
@@ -54,7 +54,7 @@
 						</div>
 						<div class="nav_text">
 							<h2 class="">Instructions</h2>
-							<p>Learn the fundamentals of using GLORE</p>
+							<p>Learn about of using GLORE</p>
 						</div>
 					</a>
 
@@ -62,12 +62,12 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Registration</h2>
-							<p>Register an account with GLORE</p>
+							<h2>Registration</h2>
+							<p>Register an account in GLORE</p>
 						</div>
 					</a>
 
-					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html" onClick="getEmailList();">
+					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
@@ -75,13 +75,13 @@
 							<p>Create a new GLORE task</p>
 						</div>
 					</a>
-
+					
 					<a id="nav_wait" class="nav bottom-border" href="./WaitForParticipants.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="hightlighted">WaitForParticipants</h2>
-							<p>Wait for participants</p>
+							<h2>WaitForParticipants</h2>
+							<p>Wait for other participants</p>
 						</div>
 					</a>
 
@@ -93,9 +93,19 @@
 							<p>Computation process</p>
 						</div>
 					</a>
-				</div>
+					
+					<a id="team" class="nav bottom-border" href="./team.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Team</h2>
+							<p>Team members</p>
+						</div>
+					</a>
+					
 				</div>
 				<!-- Navigation End-->
+			</div>
 
 			<div id="right_container" class="border rounded-upper">
 
@@ -111,32 +121,32 @@
 				
 				<div id = 'frontPage_information' class ='container'>	
 				<div class='top'>
-					<h3>Task Parameters:</h3>
+					<h3>Basic task information:</h3>
 				</div>
 				
 				<div class = 'body'>
 							<div>Task Name: </div>
 							<div id='taskName'></div>
-							<div>Initiator Email: </div>
+							<div>Initiator's Email: </div>
 							<div id='initiatorEmail'></div>
 					<div class = 'clear'></div>
 				</div>
 				
 				<div class='top'>
-					<h3>Participant Status :</h3>
+					<h3>Participants' Status :</h3>
 				</div>
 				
 				<div class = 'body'>
-					<div id="readyStatus">show the status of participants here </div>
+					<div id="readyStatus">The status of participants </div>
 					<div class = 'clear'></div>
 				</div>	
 				
 				<div class='top'>
-					<h3>Task data properties :</h3>
+					<h3>Data attribute names :</h3>
 				</div>
 				
 				<div class = 'body'>
-					<div id="taskdata_property">show task data property </div>
+					<div id="taskdata_property">Attribute names (validated for all participants) </div>
 					<div class = 'clear'></div>
 				</div>	
 				<div>
@@ -144,11 +154,11 @@
 				</div>			
 				<div class=' submitData hide'>
 				<div class='top'>
-					<h3>User data properties :</h3>
+					<h3>Attribute names (validated for all participants) :</h3>
 				</div>
 				
 				<div class = 'body'>
-					<div id='properties'>show your data property</div>
+					<div id='properties'>Data attribute names	</div>
 					<div class = 'clear'></div>
 				</div>	
 				
@@ -164,12 +174,12 @@
 						<input type="hidden" name="userFilePath" id='userFilePath'  value='userFilePath' size="50"/>
 						<input type="hidden" name="userProperty" id='userProperty'  value='userProperty' size="50"/>
 					</div>
-					<button type='button' id='submit' >Submit</button>
+					<!--<button type='button' id='submit'>Submit</button> -->
 					<div class = 'clear'></div>
 				</div>		
 				</div>
-					<button type = 'button' id='show_submit'>Submit Data</button>
-					<button type = 'button' id='begin_computation'>Begin Computation</button>
+					<button type = 'button' id='show_submit'>Provide training data location</button>
+					<button type = 'button' id='begin_computation'>Start Computation</button>
 
 				</div>
 				<div class = 'clear'></div>
