@@ -1,11 +1,11 @@
-<html>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*,java.util.*,java.io.*,org.joda.time.DateTime,org.joda.time.DateTimeComparator,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormat,java.sql.*,java.text.SimpleDateFormat;" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
 
-		<title>GLORE</title>
+		<title>WebGLORE</title>
 		<link href="./css/styles.css" rel="stylesheet" type="text/css">
 		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
 		<script src="./js/utility.js" language="JavaScript" type="text/javascript"></script>
@@ -13,7 +13,7 @@
 		 <script src="./js/utility_computation.js" language="JavaScript" type="text/javascript"></script> 
 </head>
 
-<body> 
+<body  topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" > 
 		<div id="main_container">
 
 			<div id="left_container">
@@ -26,13 +26,13 @@
 					</div>
 
 					<div id="name">
-						<h3>Grid Binary Logistic Regression</h3>
+						<h3>Web-based Grid binary LOgistic REgression (WebGLORE)</h3>
 					</div>
 
 				</div>
 				<!-- Logo End -->
 
-				<!-- Navigation Start-->
+<!-- Navigation Start-->
 				<div id="navigation" class="border rounded-upper">
 
 					<div id="nav_header" class="bottom-border">
@@ -42,16 +42,16 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 >Login</h2>
-							<p>Login GLORE system</p>
+							<h2 class="">Login</h2>
+							<p>Log into the GLORE system</p>
 						</div>
 					</a>
 					
-					<a id="nav_home" class="nav bottom-border" href="./home.html">
+					<a id="nav_home" class="nav bottom-border" href="./index.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Home</h2>
+							<h2 class="hightlighted">Home</h2>
 							<p>View your GLORE profile page</p>
 						</div>
 					</a>
@@ -69,12 +69,12 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Registration</h2>
-							<p>Register an account with GLORE</p>
+							<h2>Registration</h2>
+							<p>Register an account in GLORE</p>
 						</div>
 					</a>
 
-					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html" onClick="getEmailList();">
+					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
@@ -88,18 +88,28 @@
 						</div>
 						<div class="nav_text">
 							<h2>WaitForParticipants</h2>
-							<p>Wait for participants</p>
+							<p>Wait for other participants</p>
 						</div>
 					</a>
-					
-					<a id="nav_compute" class="nav " href="./computation.jsp">
+
+					<a id="nav_compute" class="nav bottom-border" href="./computation.jsp">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="hightlighted">Computation</h2>
+							<h2>Computation</h2>
 							<p>Computation process</p>
 						</div>
 					</a>
+					
+					<a id="team" class="nav bottom-border" href="./team.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Team</h2>
+							<p>Team members</p>
+						</div>
+					</a>
+					
 				</div>
 				<!-- Navigation End-->
 
@@ -116,7 +126,6 @@
 				</div>
 
 				<div id="content">
-
 				<%
 					System.out.println("in computation.jsp");
 					Properties confProperty = new Properties();
@@ -216,12 +225,15 @@
 				<%//}
 				%>
 				<tr><tr></tr></tr>
-				
 				<td><tr>
 				<td class="content" align="center">
 				<input type="button" value="GetGlobalReport!" disabled=true id="globalButton"  onClick="getReport('<%=taskName %>')">
 				</td>
 				<div id="reportURL"></div>
+				<!--  <td class="content" align="center"><input type="button" class="content" value="GetLocalReport"  onClick="window.location='./getlocalreportservlet'">-->
+				<!--  <td class="content" align="center">
+				<input type="button" value="GetLocalReport!" onClick="getLocalReport('<%=taskName %>')">
+				</td>-->
 				
 				<td>
 				<applet code="glore.GetLocalReportApplet.class" archive="GetLocalReportApplet.jar, Jama-1.0.2.jar" width=120 height=30>
@@ -243,6 +255,7 @@
 				<td height="50" align="center"><input type="button" disabled=true id="TestButton" value="Test" class="content" onClick="window.location='Test.jsp'">
 				</td>
 				</tr></td>
+
 
 				</div>
 

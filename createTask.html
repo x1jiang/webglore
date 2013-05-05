@@ -1,8 +1,49 @@
 <html><head>
-		<title>GLORE</title>
+		<title>WebGLORE</title>
 		<link href="./css/styles.css" rel="stylesheet" type="text/css">
 		</script><script src="./js/jquery-1.8.2.min.js" language="JavaScript" type="text/javascript"></script>
 		<script src="./js/utility_createTask.js" language="JavaScript" type="text/javascript"></script>
+		
+		<style type="text/css">
+			.buttonText {
+			  font: 14px Helvetica Neue;
+			}
+
+			#createTask_Submit {
+			  background: #EEEEEE;
+			  color: #888888;
+			  border: 2px solid #AAAAAA;
+			  height: 20px;
+			  width: 85px;
+			  padding: 0 0 0 7px;
+			  overflow: hidden;
+			  display: block;
+			  
+			  /*Transition*/
+			  -webkit-transition: All 0.5s ease;
+			  -moz-transition: All 0.5s ease;
+			  -o-transition: All 0.5s ease;
+			  -ms-transition: All 0.5s ease;
+			  transition: All 0.5s ease;
+			  
+			  /*Rounded Corners*/
+			  -webkit-border-radius: .5em;
+			  -moz-border-radius: .5em;
+			  border-radius: .5em;
+			  
+			  /*Gradient*/
+			  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+			  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+			  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+			  background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+			  background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+			}
+
+			#createTask_Submit:hover {
+				color:#FFB300;
+				width: 250px;
+			}
+		</style>
 	</head>
 
 	<body onload="javascript:getEmailList(); return false;">
@@ -19,13 +60,13 @@
 					</div>
 
 					<div id="name">
-						<h3>Grid Binary Logistic Regression</h3>
+						<h3>Web-based Grid binary LOgistic REgression (WebGLORE)</h3>
 					</div>
 
 				</div>
 				<!-- Logo End -->
 
-				<!-- Navigation Start-->
+		<!-- Navigation Start-->
 				<div id="navigation" class="border rounded-upper">
 
 					<div id="nav_header" class="bottom-border">
@@ -36,15 +77,15 @@
 						</div>
 						<div class="nav_text">
 							<h2 class="">Login</h2>
-							<p>Login GLORE system</p>
+							<p>Log into the GLORE system</p>
 						</div>
 					</a>
 					
-					<a id="nav_home" class="nav bottom-border" href="./home.html">
+					<a id="nav_home" class="nav bottom-border" href="./index.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Home</h2>
+							<h2 class="hightlighted">Home</h2>
 							<p>View your GLORE profile page</p>
 						</div>
 					</a>
@@ -62,29 +103,29 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="">Registration</h2>
-							<p>Register an account with GLORE</p>
+							<h2>Registration</h2>
+							<p>Register an account in GLORE</p>
 						</div>
 					</a>
 
-					<a id="nav_createTask" class="nav bottom-border" onclick="javascript:getEmailList(); return false;" href="./createTask.html" >
+					<a id="nav_createTask" class="nav bottom-border" href="./createTask.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="hightlighted">Create Task</h2>
+							<h2>Create Task</h2>
 							<p>Create a new GLORE task</p>
 						</div>
 					</a>
-
+					
 					<a id="nav_wait" class="nav bottom-border" href="./WaitForParticipants.html">
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
 							<h2>WaitForParticipants</h2>
-							<p>Wait for participants</p>
+							<p>Wait for other participants</p>
 						</div>
 					</a>
-					
+
 					<a id="nav_compute" class="nav bottom-border" href="./computation.jsp">
 						<div class="nav_icon">
 						</div>
@@ -93,9 +134,19 @@
 							<p>Computation process</p>
 						</div>
 					</a>
-				</div>
+					
+					<a id="team" class="nav bottom-border" href="./team.html">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Team</h2>
+							<p>Team members</p>
+						</div>
+					</a>
+					
 				</div>
 				<!-- Navigation End-->
+			</div>
 
 			<div id="right_container" class="border rounded-upper">
 
@@ -137,7 +188,7 @@
 							<div class = 'clear'></div>
 
 		                    <div class="top">
-								<h3>Initiator Email:</h3>
+								<h3>Initiator's Email:</h3>
 							</div>
 							<div>
 							 <div class="container alignleft"> 
@@ -149,7 +200,7 @@
 				           	</div>
 							           
 							<div class='top'>
-								<h3>Participant Information:</h3>
+								<h3>Participants' email list:</h3>
 							</div>
 
 							<div class="body">
@@ -218,9 +269,9 @@
 									</td>
 								</tr>
 							</div>
--->
+						-->
 							<div class='top'>
-								<h3>Task Parameters:</h3>
+								<h3>Model Parameters:</h3>
 							</div>
 
 							<div class = 'body'>
@@ -231,7 +282,7 @@
 								</div>
 								<div class='clear'></div>
 								<div> 
-									<div  class='alignleft'><span>Epsilon</span></div>
+									<div  class='alignleft'><span>Epsilon (i.e., model precision)</span></div>
 									<div id = 'createTask_epsilon' class = 'formComfirmationImg check alignright' ></div>
 									<div class='alignright'><input type='text' id='epsilon' name='epsilon' value='0.000001'></div>
 								</div>
@@ -239,19 +290,19 @@
 							</div>
 							<div class="body">
 								<div>
-									<applet code="glore.ChooseFileApplet.class" archive="ChooseFileApplet.jar, Jama-1.0.2.jar" width="390" height="62&quot;" mayscript="">
+									<applet border="0"  code="glore.ChooseFileApplet.class" archive="ChooseFileApplet.jar, Jama-1.0.2.jar" width="390" height="62" BORDER=25 mayscript="">
 										<!-- The parameter of applet is added by jwc -->
 										<param name="showFilePath" value="showFilePath">
 									</applet>
 									<div id="choosefile" class="formComfirmationImg wrong alignright"></div>
 								</div>
 								<div>
-									<div class="alignright"><input type="hidden" name="showFilePath" id="showFilePath" size="50"></div>
-									<div class="alignright"><input type="hidden" name="showProperty" id="showProperty" value="showProperty" size="50"></div>
+									<div class="alignright"><input type="hidden" name="showFilePath" id="showFilePath" size="45"></div>
+									<div class="alignright"><input type="hidden" name="showProperty" id="showProperty" value="showProperty" size="45"></div>
 								</div>
 							</div>
 							
-							<button type='button' id='createTask_Submit' >Create</button>
+							<button type='button' href="#" id='createTask_Submit'>Create Task :Take a few seconds</button>
 
 						</form>
 
