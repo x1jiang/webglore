@@ -1,8 +1,9 @@
+<html>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*,java.util.*,java.io.*,org.joda.time.DateTime,org.joda.time.DateTimeComparator,org.joda.time.format.DateTimeFormatter,org.joda.time.format.DateTimeFormat,java.sql.*,java.text.SimpleDateFormat;" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+
 <head>
 
 		<title>WebGLORE</title>
@@ -51,7 +52,7 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2 class="hightlighted">Home</h2>
+							<h2>Home</h2>
 							<p>View your GLORE profile page</p>
 						</div>
 					</a>
@@ -96,8 +97,17 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2>Computation</h2>
+							<h2 class="hightlighted">Computation</h2>
 							<p>Computation process</p>
+						</div>
+					</a>
+					
+					<a id="nav_test" class="nav bottom-border" href="./Test.jsp">
+						<div class="nav_icon">
+						</div>
+						<div class="nav_text">
+							<h2>Test Data</h2>
+							<p>Test your local data</p>
 						</div>
 					</a>
 					
