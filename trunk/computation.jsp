@@ -216,7 +216,6 @@
 				  }
 				%>
 				
-				
 				<table>
 				<tr>
 				<td>
@@ -238,15 +237,26 @@
 				<td><tr>
 				<td class="content" align="center">
 				<input type="button" value="GetGlobalReport!" disabled=true id="globalButton"  onClick="getReport('<%=taskName %>')">
+				
+				<script type="text/javascript"><!--
+							
+							function testPause2() {
+							  document.getElementById('error_display').innerHTML = '<p>Please allow a few second for the button to become active as the system is generating the report.</p>';
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 4000);
+							}
+							
+							document.getElementById('globalButton').onmouseover  = testPause2;
+				--></script>
+				
 				</td>
 				<div id="reportURL"></div>
 				<!--  <td class="content" align="center"><input type="button" class="content" value="GetLocalReport"  onClick="window.location='./getlocalreportservlet'">-->
 				<!--  <td class="content" align="center">
 				<input type="button" value="GetLocalReport!" onClick="getLocalReport('<%=taskName %>')">
-				</td>-->
-				
+				</td>-->					
 				<td>
-				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
+				
+				<applet id = "localButton" code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
 				<param name="email" value="<%=email %>">
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
@@ -257,14 +267,28 @@
 				<param name="property" value="<%=property %>">
 				<param name="createReportAddress" value="<%=confProperty.getProperty("createReportAddress") %>">
 				</applet> 
+				
+				<script type="text/javascript"><!--
+							
+							function testPause3() {
+							  document.getElementById('error_display').innerHTML = '<p>After clicking, please wait for a few seconds for the system to generate a local report.</p>';
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 4000);
+							}
+							
+							document.getElementById('localButton').onmouseover  = testPause3;
+				--></script>
+				
 				</td>
 				
 				<div id="LocalreportURL"></div>
+					
+				
 				<!-- <td class="content" align="center"><input type="submit" value="Test" disabled=true/> </td> -->
 				<td bgcolor="#BCBCBC"> </td>
 				<td height="50" align="center"><input type="button" disabled=true id="TestButton" value="Test" class="content" onClick="window.location='Test.jsp'">
 				</td>
-				</tr></td>
+				</tr>
+				</td>
 
 
 				</div>
