@@ -189,8 +189,18 @@
 				</div>
 					<button type = 'button' id='show_submit'>Provide training data location</button>
 					<button type = 'button' id='begin_computation'>Start Computation</button>
-
+				
+				<script type="text/javascript"><!--
+							
+							function testPause2() {
+							  document.getElementById('error_display').innerHTML = '<p>Please wait until you see the status change of participants before hitting start computation.</p>';
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
+							}
+							
+							document.getElementById('begin_computation').onmouseover  = testPause2;
+				--></script>
 				</div>
+				
 				<div class = 'clear'></div>
 			</div>		
 				</div>

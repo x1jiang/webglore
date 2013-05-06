@@ -147,6 +147,16 @@
 						<div class = 'clear'></div>
 						<button type = 'button' id='login_submit'>Login</button>
 						<button type = 'button' id='Anonymous_submit'>Anonymous Access</button>
+						
+						<script type="text/javascript"><!--
+							
+							function testPause2() {
+							  document.getElementById('error_display').innerHTML = '<p>If one logs in anonymously, he or she cannot check profile or collaborator information.</p>';
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
+							}
+							
+							document.getElementById('Anonymous_submit').onmouseover  = testPause2;
+							--></script>
 					</form>
 
 				</div>

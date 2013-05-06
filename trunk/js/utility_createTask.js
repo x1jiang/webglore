@@ -15,10 +15,30 @@ $(document).ready(function(){
 //		var w2 = new WaitingTip({innerHTML:"<img src='images/waiting.gif' />wait several seconds..."});  
 //        var div1El = document.getElementById("createTask_Submit");  
 //        w2.show(div1El,"center"); 
-		if ( comfirmCreatetask())
+		
+//		$('#error_display').append('<p>Please allow a few seconds for the system to create a task<br><br><br><br><br><br><br><br><br></p>');
+//		setTimeout( function(){$('#error_display').empty();}, 2000); 
+		confirmCreateTaskNow();
+	
+	});
+
+	$('form#createTask').find('input').each(function(){
+		$(this).keyup(function(e){
+			console.log(this);
+			console.log(comfirmCreatetask());
+		});
+	});
+});
+
+
+// confirmCreateTaskNow
+function confirmCreateTaskNow(){
+	if ( comfirmCreatetask())
 	{
-		$('#error_display').empty();
-		$('#error_display').append('<p>Please allow a few seconds for the system to create a task<br><br><br><br><br><br><br><br><br></p>');
+		
+		//$('#error_display').append('<p>Please allow a few seconds for the system to create a task<br><br><br><br><br><br><br><br><br></p>');
+		//setTimeout( function() { $('#error_display').append('<p>Please allow a few seconds for the system to create a task<br><br><br><br><br><br><br><br><br></p>');}, 5000); 
+		//	setTimeout( function(){$('#error_display').empty();}, 2000);
 		//	alert(testflag);
 		$.ajax({type:'POST', async:false, url: './creategloretaskservlet', data:$('#createTask').serialize(),
 			success: function(data){
@@ -35,15 +55,8 @@ $(document).ready(function(){
 				}
 			}});
 	}
-	});
+	}
 
-	$('form#createTask').find('input').each(function(){
-		$(this).keyup(function(e){
-			console.log(this);
-			console.log(comfirmCreatetask());
-		});
-	});
-});
 
 /* adds participants to task */
 function addEmails( participants )
