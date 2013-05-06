@@ -5,7 +5,8 @@
 		<script src="./js/utility_createTask.js" language="JavaScript" type="text/javascript"></script>
 		<script src="./js/waitingTip.js" language="JavaScript" type="text/javascript"></script>
 		
-		<style type="text/css">
+		
+		<!--style type="text/css">
 			.buttonText {
 			  font: 14px Helvetica Neue;
 			}
@@ -44,7 +45,7 @@
 				color:#FFB300;
 				width: 250px;
 			}
-		</style>
+		</style-->
 	</head>
 
 	<body onload="javascript:getEmailList(); return false;">
@@ -312,7 +313,18 @@
 								</div>
 							</div>
 							
-							<button type='button' href="#" id='createTask_Submit'>Create Task :Take a few seconds</button>
+							<button type='button' href="#" id='createTask_Submit'>Create Task</button>
+							
+							<div class="apare"><div id="tstcnt"> </div></div>
+							<script type="text/javascript"><!--
+							
+							function testPause2() {
+							  document.getElementById('tstcnt').innerHTML = '<h4>After clicking, the system takes a few seconds to validate the task.</h4>';
+							  setTimeout(function() { document.getElementById('tstcnt').innerHTML = ''; }, 2000);
+							}
+							
+							document.getElementById('createTask_Submit').onmouseover  = testPause2;
+							--></script>
 
 						</form>
 
