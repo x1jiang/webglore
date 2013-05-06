@@ -146,17 +146,24 @@
 						</div>
 						<div class = 'clear'></div>
 						<button type = 'button' id='login_submit'>Login</button>
+						<script type="text/javascript"><!--
+							function testPause() {
+							  document.getElementById('error_display').innerHTML = '<p>If you are a registered user, please sign in. Otherwise, you can either register an account or log in anonymously.</p>';
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 4000);
+							}
+							document.getElementById('login_submit').onmouseover  = testPause;
+						--></script>
+						
 						<button type = 'button' id='Anonymous_submit'>Anonymous Access</button>
 						
 						<script type="text/javascript"><!--
-							
 							function testPause2() {
 							  document.getElementById('error_display').innerHTML = '<p>If one logs in anonymously, he or she cannot check profile or collaborator information.</p>';
-							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 4000);
 							}
 							
 							document.getElementById('Anonymous_submit').onmouseover  = testPause2;
-							--></script>
+						--></script>
 					</form>
 
 				</div>
