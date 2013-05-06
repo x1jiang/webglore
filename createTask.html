@@ -203,7 +203,18 @@
 							</div>
 							<div>
 							 <div class="container alignleft"> 
-								<div class='alignleft'><input id='ownerEmail' name='ownerEmail'></div>
+								<div class='alignleft'><input id='ownerEmail' name='ownerEmail'>
+								
+								<script type="text/javascript"><!--
+							
+								function testPause3() {
+								  document.getElementById('error_display').innerHTML = '<p>Login is required to create a task.</p>';
+								  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
+								}
+								
+								document.getElementById('ownerEmail').onmouseover  = testPause3;
+								--></script>
+								</div>
 								<div id="createTask_ownerEmail" class="formComfirmationImg wrong alignleft"></div>
 								<div class="clear"></div>				
 				           	</div>
@@ -319,7 +330,7 @@
 							
 							function testPause2() {
 							  document.getElementById('error_display').innerHTML = '<p>After clicking, the system takes a few seconds to validate the task.</p>';
-							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 2000);
+							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
 							}
 							
 							document.getElementById('createTask_Submit').onmouseover  = testPause2;
