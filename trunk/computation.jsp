@@ -247,7 +247,11 @@
 				</td>-->					
 				<td>
 				
+<<<<<<< .mine
+				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=135 height=34>
+=======
 				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
+>>>>>>> .r55
 				<param name="email" value="<%=email %>">
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
