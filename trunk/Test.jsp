@@ -133,23 +133,23 @@
 				<div id="full_content">
 
 
-<table width="1024" align="center" valign="middle" bgcolor="">
+<table width="750" align="center" valign="middle" bgcolor="">
 
 <tr><td>
-<table align="center" width="800">
+<table align="center" width="700">
 <tr>
 <td>
 <!--  <form action="creategloretaskservlet" method = "post" enctype="application/x-www-form-urlencoded">-->
 
-<table width="800" align="left" valign="left" >
+<table width="700" align="left" valign="left" >
 <tr>
 
 <td align="center"> </td>
 <tr>
 	<td>
-		<table width = 800 class="content">
+		<table width = 680 class="content">
 			<tr>
-				<td>Test GLORE performance using local data</td>
+				<td>Test GLORE using local data</td>
 			</tr>
 <%
 	Properties properties = new Properties();
@@ -187,7 +187,7 @@
 %>
 	
 <td>
-<applet code="glore.LocalTestApplet.class" archive="WebGlore.jar" width=500 height=55" MAYSCRIPT>
+<applet code="glore.LocalTestApplet.class" archive="WebGlore.jar" width=500 height=72" MAYSCRIPT>
 <!-- The parameter of applet is added by jwc -->
 <param name="showFilePath" value="<%=showFilePath %>">
 <param name="betaString" value="<%=betaString %>">
@@ -219,7 +219,7 @@ function accessAppletResult()
 
  <tr>
  <td>
-<div id="TestResult" align="center" valign="middle">Here to show the test result!</div></td>
+<div id="TestResult" align="center" valign="middle">Show test results below:</div></td>
 </tr>
 
 </tr>
