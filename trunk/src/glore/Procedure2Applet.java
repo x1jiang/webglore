@@ -70,14 +70,14 @@ public class Procedure2Applet extends JApplet
 		sendPane.setSize(500,500);
 		sendPane.setBackground(new Color(255, 255, 255));
 		Border etchedBdr3 = BorderFactory.createEtchedBorder();
-		Border titledBdr3 = BorderFactory.createTitledBorder(etchedBdr3, "------------------------------------------On-going iterations----------------------------------------");
+		Border titledBdr3 = BorderFactory.createTitledBorder(etchedBdr3, "----------------------------------------------------------------------------------------------------");
 		Border emptyBdr3  = BorderFactory.createEmptyBorder(10,20,20,20);
 		Border compoundBdr3=BorderFactory.createCompoundBorder(titledBdr3, emptyBdr3);
 		sendPane.setBorder(compoundBdr3);
 		sendPane.setLayout(new GridBagLayout());
 		GridBagConstraints c3 = new GridBagConstraints(); 
 		
-		JLabel resultsLabel = new JLabel("----------Iteration information----------");
+		JLabel resultsLabel = new JLabel("----------Information exchange----------");
 		c3.fill = GridBagConstraints.CENTER;//HORIZONTAL
 		c3.anchor = GridBagConstraints.CENTER;
 		c3.weightx =4;
@@ -106,7 +106,7 @@ public class Procedure2Applet extends JApplet
 	class WriteData implements Runnable{
 		public void run(){
 			try{
-			Thread.sleep(1000);
+			Thread.sleep(500);
 //			fileBox.setText("go");
 			PrintStream save = System.out;
 			System.setOut(new GUIPrintStream(System.out, fileBox));
@@ -122,7 +122,7 @@ public class Procedure2Applet extends JApplet
 			
 			System.setOut(save);
 //			System.setErr(save);
-			System.out.println("come back");
+			System.out.println("Get back");
 			}catch(Exception e){
 				e.printStackTrace();
 			}
