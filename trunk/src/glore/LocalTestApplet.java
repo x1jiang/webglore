@@ -1,19 +1,19 @@
 package glore;
 import java.io.*;
 import java.net.URL;
-import java.sql.*;
-import java.net.URLConnection;
-import java.net.MalformedURLException;
+//import java.sql.*;
+//import java.net.URLConnection;
+//import java.net.MalformedURLException;
 import java.awt.*;
 import java.awt.event.*;
-import java.applet.*;
+//import java.applet.*;
 import javax.swing.*;
 import javax.swing.border.*;
 import java.lang.Math;
 import Jama.Matrix;
 
-import java.security.AccessController;
-import java.security.PrivilegedAction;
+//import java.security.AccessController;
+//import java.security.PrivilegedAction;
 import java.util.Arrays;
 import java.util.Vector;
 

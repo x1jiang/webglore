@@ -2,24 +2,24 @@ package glore;
 
 import java.io.*;
 import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Cursor;
-import java.awt.Graphics;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+//import java.awt.Color;
+//import java.awt.Cursor;
+//import java.awt.Graphics;
+//import java.awt.GridBagConstraints;
+//import java.awt.GridBagLayout;
 import java.net.URL;
-import java.sql.*;
+//import java.sql.*;
 import java.net.HttpURLConnection;
-import java.net.URLConnection;
-import java.net.MalformedURLException;
-import java.awt.*;
+//import java.net.URLConnection;
+//import java.net.MalformedURLException;
+//import java.awt.*;
 import java.awt.event.*;
-import java.applet.*;
+//import java.applet.*;
 import javax.swing.*;
-import javax.swing.border.*;
+//import javax.swing.border.*;
 
-import java.security.AccessController;
-import java.security.PrivilegedAction;
+//import java.security.AccessController;
+//import java.security.PrivilegedAction;
 import java.util.Vector;
 
 import Jama.Matrix;

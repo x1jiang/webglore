@@ -3,7 +3,7 @@ package glore;
 import javax.mail.*;
 import javax.mail.internet.*;
 import java.util.Properties;
-import javax.mail.internet.*;
+//import javax.mail.internet.*;
 import javax.activation.*;
 import java.io.File;
 
