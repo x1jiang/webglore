@@ -47,8 +47,6 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 			e.printStackTrace();
 		}
 	}
-	
-
 
 	private void jbInit() throws Exception
 	{
@@ -124,7 +122,6 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 				    Matrix X, Y;
 				    Matrix P, W, D, E;
 				    Matrix temp_a, temp_b, temp_c;
-
 				    int i, j;
 
 				    // count the number of iterations
