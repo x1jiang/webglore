@@ -70,7 +70,7 @@ public class ChooseFileApplet extends JApplet implements ActionListener{
 		JPanel filePane = new JPanel();
 		filePane.setBackground(new Color(255, 255, 255));
 		Border etchedBdr = BorderFactory.createEtchedBorder();
-		Border titledBdr = BorderFactory.createTitledBorder(etchedBdr, "Upload data File");
+		Border titledBdr = BorderFactory.createTitledBorder(etchedBdr, "Specify the path to the local data file");
 		Border emptyBdr  = BorderFactory.createEmptyBorder(5,5,5,5);
 		Border compoundBdr=BorderFactory.createCompoundBorder(titledBdr, emptyBdr);
 		filePane.setBorder(compoundBdr);
