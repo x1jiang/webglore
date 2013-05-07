@@ -143,29 +143,29 @@
 				</div>	
 				
 				<div class='top'>
-					<h3>Data attribute names :</h3>
+					<h3>Global data attribute names:</h3>
 				</div>
 				
 				<div class = 'body'>
-					<div id="taskdata_property">Attribute names (validated for all participants) </div>
+					<div id="taskdata_property">Local attribute names (validated for all participants): </div>
 					<div class = 'clear'></div>
 				</div>	
 				<div>
 				<div class='alignright'><input type="hidden" name="taskProperty" id='taskProperty'  value='taskProperty' size="50"/></div>
 				</div>			
-				<div class=' submitData hide'>
+				<div class='submitData hide'>
 				<div class='top'>
-					<h3>Attribute names (validated for all participants) :</h3>
+					<h3>Local attribute names (validated for all participants): </h3>
 				</div>
 				
 				<div class = 'body'>
-					<div id='properties'>Data attribute names	</div>
+					<div id='properties'>attribute names</div>
 					<div class = 'clear'></div>
 				</div>	
 				
 				<div class='body '>
 					<div>
-						<applet code="glore.ChooseFileApplet.class" archive="WebGlore.jar" width=400 height=55" MAYSCRIPT>
+						<applet code="glore.ChooseFileApplet.class" archive="WebGlore.jar" width=400 height=65" MAYSCRIPT>
 							<!-- The parameter of applet is added by jwc -->
 							<param name="showFilePath" value="showFilePath">
 						</applet>
@@ -175,7 +175,7 @@
 						<input type="hidden" name="userFilePath" id='userFilePath'  value='userFilePath' size="50"/>
 						<input type="hidden" name="userProperty" id='userProperty'  value='userProperty' size="50"/>
 					</div>
-					<!--<button type='button' id='submit'>Submit</button> -->
+					<button type='button' id='submit'>Submit</button>
 					<div class = 'clear'></div>
 				</div>		
 				</div>
@@ -185,7 +185,7 @@
 				<script type="text/javascript"><!--
 							
 							function testPause2() {
-							  document.getElementById('error_display').innerHTML = '<p>Please wait until you see the status change of participants before hitting start computation.</p>';
+							  document.getElementById('error_display').innerHTML = '<p>Do no hit unless you are the task initiator.</p>';
 							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 3000);
 							}
 							

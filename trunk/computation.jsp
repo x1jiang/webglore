@@ -162,7 +162,6 @@
 					else if (session.getAttribute("email") != null)
 					{
 					     email = (String)session.getAttribute("email");
-					
 					}
 					
 				    if (request.getParameter("taskName") != null)
@@ -246,12 +245,10 @@
 				<input type="button" value="GetLocalReport!" onClick="getLocalReport('<%=taskName %>')">
 				</td>-->					
 				<td>
-				
-<<<<<<< .mine
+
 				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=135 height=34>
-=======
-				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
->>>>>>> .r55
+
+
 				<param name="email" value="<%=email %>">
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
