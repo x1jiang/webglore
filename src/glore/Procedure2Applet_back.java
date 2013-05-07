@@ -134,7 +134,7 @@ public class Procedure2Applet_back extends JApplet
 			
 			System.setOut(save);
 //			System.setErr(save);
-			System.out.println("come back");
+			System.out.println("get back");
 			}catch(Exception e){
 				e.printStackTrace();
 			}

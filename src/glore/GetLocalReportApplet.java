@@ -47,8 +47,6 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 			e.printStackTrace();
 		}
 	}
-	
-
 
 	private void jbInit() throws Exception
 	{
@@ -69,9 +67,9 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 		taskStatus = Integer.parseInt(getParameter("taskStatus"));
 		property = getParameter("property");
 		createReportAddress = getParameter("createReportAddress");
-		
-	//	System.out.println("all Parameters: "+ email + "\t" + dataPath + "\t" + taskName + "\t" + root_property + "\t"
-	//	+ maxIteration + "\t" + epsilon + "\t" + taskStatus + "\t" + property);
+        System.out.println("Initiate GetLocalReportApplet class...");
+		System.out.println("all Parameters: "+ email + "\t" + dataPath + "\t" + taskName + "\t" + root_property + "\t"
+		+ maxIteration + "\t" + epsilon + "\t" + taskStatus + "\t" + property);
 		
 //		email="w6jiang@ucsd.edu";
 //		dataPath="C:/Users/Wenchao/Documents/ca_part2";
