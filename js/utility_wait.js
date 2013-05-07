@@ -130,11 +130,13 @@ function getTaskInfo(){
 		//to get initiator email
 //		$('#initiatorEmail')[0].innerHTML = initEmail;
 		$('#taskName')[0].innerHTML = taskName;
+		$('#begin_computation').hide();
 	}
 //	var Request = GetRequest();
 //	var task=Request['taskName'];
 //	var email = Request['email'];
 	else{
+		$('#show_submit').hide();
 		$.ajax({type:'POST', async:false, url: './getTaskInfo', 
 		success: function(data){
 			var statusInfo = eval("(" + data + ")");
