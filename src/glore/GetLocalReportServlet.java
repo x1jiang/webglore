@@ -3,7 +3,7 @@ import java.sql.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
+//import java.net.URLConnection;
 import java.util.*;
 
 import javax.servlet.*;

@@ -1,4 +1,5 @@
-rem jar cvf ..\WebGlore.jar glore\*
+rem cd bin
+rem jar cvf ..\WebGlore.jar .\*
 rem cd ..
 keytool -genkey -alias webglore -keystore ca
 keytool -export -keystore ca -alias webglore -file webglore.cert
