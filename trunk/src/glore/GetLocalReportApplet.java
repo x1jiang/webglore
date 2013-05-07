@@ -2,24 +2,24 @@ package glore;
 
 import java.io.*;
 import java.awt.BorderLayout;
-//import java.awt.Color;
-//import java.awt.Cursor;
-//import java.awt.Graphics;
-//import java.awt.GridBagConstraints;
-//import java.awt.GridBagLayout;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Graphics;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.net.URL;
-//import java.sql.*;
+import java.sql.*;
 import java.net.HttpURLConnection;
-//import java.net.URLConnection;
-//import java.net.MalformedURLException;
-//import java.awt.*;
+import java.net.URLConnection;
+import java.net.MalformedURLException;
+import java.awt.*;
 import java.awt.event.*;
-//import java.applet.*;
+import java.applet.*;
 import javax.swing.*;
-//import javax.swing.border.*;
+import javax.swing.border.*;
 
-//import java.security.AccessController;
-//import java.security.PrivilegedAction;
+import java.security.AccessController;
+import java.security.PrivilegedAction;
 import java.util.Vector;
 
 import Jama.Matrix;
@@ -47,6 +47,8 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 			e.printStackTrace();
 		}
 	}
+	
+
 
 	private void jbInit() throws Exception
 	{
@@ -68,8 +70,8 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 		property = getParameter("property");
 		createReportAddress = getParameter("createReportAddress");
 		
-		System.out.println("all Parameters: "+ email + "\t" + dataPath + "\t" + taskName + "\t" + root_property + "\t"
-		+ maxIteration + "\t" + epsilon + "\t" + taskStatus + "\t" + property);
+	//	System.out.println("all Parameters: "+ email + "\t" + dataPath + "\t" + taskName + "\t" + root_property + "\t"
+	//	+ maxIteration + "\t" + epsilon + "\t" + taskStatus + "\t" + property);
 		
 //		email="w6jiang@ucsd.edu";
 //		dataPath="C:/Users/Wenchao/Documents/ca_part2";
@@ -122,6 +124,7 @@ public class GetLocalReportApplet extends JApplet implements ActionListener{
 				    Matrix X, Y;
 				    Matrix P, W, D, E;
 				    Matrix temp_a, temp_b, temp_c;
+
 				    int i, j;
 
 				    // count the number of iterations
