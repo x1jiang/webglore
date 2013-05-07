@@ -79,7 +79,7 @@ public class LocalTestApplet extends JApplet implements ActionListener{
 		JPanel filePane = new JPanel();
 		filePane.setBackground(new Color(255, 255 ,255 ));
 		Border etchedBdr = BorderFactory.createEtchedBorder();
-		Border titledBdr = BorderFactory.createTitledBorder(etchedBdr, "Upload your test data file:");
+		Border titledBdr = BorderFactory.createTitledBorder(etchedBdr, "Specify the path to your local test data file:");
 		Border emptyBdr  = BorderFactory.createEmptyBorder(10,10,10,10);
 		Border compoundBdr=BorderFactory.createCompoundBorder(titledBdr, emptyBdr);
 		filePane.setBorder(compoundBdr);

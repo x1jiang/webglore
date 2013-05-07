@@ -93,19 +93,11 @@
 						<div class="nav_icon">
 						</div>
 						<div class="nav_text">
-							<h2>Computation</h2>
+							<h2 class="hightlighted">Computation</h2>
 							<p>Computation process</p>
 						</div>
 					</a>
 					
-					<a id="nav_test" class="nav bottom-border" href="./Test.jsp">
-						<div class="nav_icon">
-						</div>
-						<div class="nav_text">
-							<h2 class="hightlighted">Test Data</h2>
-							<p>Test your local data</p>
-						</div>
-					</a>
 					
 					<a id="team" class="nav bottom-border" href="./team.html">
 						<div class="nav_icon">
