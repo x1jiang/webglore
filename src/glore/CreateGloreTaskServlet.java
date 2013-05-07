@@ -181,7 +181,7 @@ public class CreateGloreTaskServlet extends HttpServlet
 		req.getSession().setAttribute("showProperty", property);
 		if(property.equals("showProperty"))
 		{
-			errors.put("property","Please upload your data file to set the data format!");
+			errors.put("property","Please specify your data file location to check the data format!");
 		}
 		
 		//set the attributes before the redirect of page
