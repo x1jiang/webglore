@@ -259,13 +259,13 @@ public class GloreClient2 {
 		    System.out.println("Covariance matrix:");
 		    cov_matrix.print(8, 6);
 
-		    // compute SD matrix
+		    // compute Standard deviation vector
 		    SD = new Matrix(1, m);
 		    for (i = 0; i < m; i++) {
 			SD.set(0, i, Math.sqrt(cov_matrix.get(i,i)));
 		    }
 
-		    System.out.println("SD matrix:");
+		    System.out.println("Standard deviation vector:");
 		    SD.print(8, 6);
 		    
 
