@@ -3,7 +3,7 @@ package glore;
 import java.io.OutputStream;
 import java.io.PrintStream;
 import javax.swing.SwingUtilities;
-import javax.swing.text.JTextComponent;
+//import javax.swing.text.JTextComponent;
 import java.awt.TextComponent;
 
 
