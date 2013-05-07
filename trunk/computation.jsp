@@ -247,7 +247,7 @@
 				</td>-->					
 				<td>
 				
-				<applet id = "localButton" code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
+				<applet code="glore.GetLocalReportApplet.class" archive="WebGlore.jar" width=120 height=30>
 				<param name="email" value="<%=email %>">
 				<param name="dataPath" value="<%=dataPath %>">
 				<param name="taskName" value="<%=taskName %>">
@@ -259,15 +259,14 @@
 				<param name="createReportAddress" value="<%=confProperty.getProperty("createReportAddress") %>">
 				</applet> 
 				
-				<script type="text/javascript"><!--
-							
+				<!--script type="text/javascript"><
 							function testPause3() {
 							  document.getElementById('error_display').innerHTML = '<p>After clicking, please wait for a few seconds for the system to generate a local report.</p>';
 							  setTimeout(function() { document.getElementById('error_display').innerHTML = ''; }, 4000);
 							}
 							
 							document.getElementById('localButton').onmouseover  = testPause3;
-				--></script>
+				></script-->
 				
 				</td>
 				
