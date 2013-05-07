@@ -46,7 +46,7 @@ $(document).ready(function(){
 		}else{
 			$('.submitData').addClass('hide');
 			$('.submitData').hide();
-			$('#show_submit').html('Check local data');
+			$('#show_submit').html('Show file selector');
 		}
 	});
 
