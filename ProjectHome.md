@@ -1,0 +1,1 @@
+A applet-servelet based grid logistic regression (GLORE)
